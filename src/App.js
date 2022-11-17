@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { v4 as uuid } from 'uuid';
 import {React, useState} from 'react';
+import Task from './component/Task';
 
 const data = {
   "data": [
@@ -33,9 +34,7 @@ function App() {
           return (
             <>
               <li>
-                <p><span>key: </span><em>{task.key}</em></p>
-                <p><span>text: </span><em>{task.text}</em></p>
-                <p><span>done: </span><em>{task.done ? '完了' : '未完了'}</em></p>
+                <Task task={task} />
               </li>
             </>
           );
