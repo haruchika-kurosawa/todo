@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { v4 as uuid } from 'uuid';
 import {React, useState} from 'react';
-import Task from './component/Task';
+import TaskList from './component/TaskList';
 
 const data = {
   "data": [
@@ -29,17 +29,7 @@ function App() {
 
   return (
     <div className="App">
-      {
-        tasks.map((task) => {
-          return (
-            <>
-              <li>
-                <Task task={task} />
-              </li>
-            </>
-          );
-        })
-      }
+      <TaskList tasks={tasks} />
       <p>test</p>
     </div>
   );
